@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Free WEB Proxy</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Google fonts - Popppins for copy ros-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,800">
+    <!-- orion icons-->
+    <link rel="stylesheet" href="css/orionicons.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png?3">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+    <style>
+        .bs-glyphicons {
+            margin: 0 -10px 20px;
+            overflow: hidden;
+        }
+
+        .bs-glyphicons-list {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .bs-glyphicons li {
+            float: left;
+            width: 25%;
+            height: 115px;
+            padding: 10px;
+            font-size: 10px;
+            line-height: 1.4;
+            text-align: center;
+            /*background-color: #f9f9f9;*/
+            border: 1px solid #fff;
+        }
+
+        .bs-glyphicons .glyphicon {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .bs-glyphicons .glyphicon-class {
+            display: block;
+            text-align: center;
+            word-wrap: break-word; /* Help out IE10+ with class names */
+        }
+
+        @media (min-width: 768px) {
+            .bs-glyphicons {
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            .bs-glyphicons li {
+                width: 12.5%;
+                font-size: 12px;
+            }
+        }
+    </style>
+
+    <script>
+        var host = "./-----";
+
+        function go() {
+            var url = document.getElementById('url').value;
+
+            window.open(host + url);
+        }
+
+        function gotourl(url) {
+            window.open(host + url);
+        }
+    </script>
+</head>
+<body>
+<!-- navbar-->
+<header class="header">
+    <nav class="navbar navbar-expand-lg px-4 py-2 bg-white shadow">
+        <a href="#" class="sidebar-toggler text-gray-500 mr-4 mr-lg-5 lead">
+            <br>
+        </a>
+        <a href="/index.html" class="navbar-brand font-weight-bold text-uppercase text-base">FreeVpn000.com</a>
+        <ul class="ml-auto d-flex align-items-center list-unstyled mb-0">
+            <li class="nav-item"></li>
+        </ul>
+    </nav>
+</header>
+<div class="page-holder w-100 d-flex flex-wrap">
+    <div class="container-fluid px-xl-5">
+        <section class="py-5">
+            <div class="row">
+
+                <!-- Form Elements -->
+                <div class="col-lg-12 mb-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="h6 text-uppercase mb-0">Free WEB Proxy </h3>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="form-group row justify-content-md-center">
+
+                                <div class="col-md-9 ">
+
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <input type="text" id="txtURL" placeholder="google.com" aria-label="google.com"
+                                                   aria-describedby="button-addon2" class="form-control">
+                                            <div class="input-group-append">
+                                                <button id="btnGo" type="button" class="btn btn-primary"
+                                                        >Go to
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <small class="form-text text-muted ml-3">Enter the URL of the target and click the
+                                        "Go to".
+                                    </small>
+                                </div>
+                            </div>
+
+                            <div class="line"></div>
+
+
+                            <div class="d-none">
+                                <select id="selNode"></select>
+                                <div class="box" id="list"></div>
+                            </div>
+
+
+                            <div class="form-group row justify-content-md-center">
+                                <label class="col-md-9 form-control-label">Quick Links <br>
+                                    <!--<small class="text-primary">-->
+                                    <!--<a href="javascript:gotourl('google.com');">Google.com</a> |-->
+                                    <!--<a href="javascript:gotourl('facebook.com');">Facebook.com</a> |-->
+                                    <!--<a href="javascript:gotourl('youtube.com');">Youtube.com</a> |-->
+                                    <!--<a href="javascript:gotourl('amazon.com');">Amazon.com</a> |-->
+                                    <!--<a href="javascript:gotourl('twitter.com');">Twitter.com</a> |-->
+                                    <!--<a href="javascript:gotourl('wikipedia.org');">Wikipedia.com</a>-->
+                                    <!--</small>-->
+                                    <div>
+                                        <div class="bs-glyphicons">
+                                            <ul class="bs-glyphicons-list">
+
+
+                                                <li>
+                                                    <a href="javascript:gotourl('google.com');">
+                                                        <img src="img/ico/google.png" width="50" alt="">
+                                                        <span class="glyphicon-class">Google</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:gotourl('facebook.com');">
+                                                        <img src="img/ico/facebook.png" width="50" alt="">
+                                                        <span class="glyphicon-class">Facebook</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:gotourl('youtube.com');">
+                                                        <img src="img/ico/youtube.png" width="50" alt="">
+                                                        <span class="glyphicon-class">Youtube</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:gotourl('amazon.com');">
+                                                        <img src="img/ico/amazon.png" width="64" alt="">
+                                                        <span class="glyphicon-class">Amazon</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:gotourl('twitter.com');">
+                                                        <img src="img/ico/twitter.png" width="50" alt="">
+                                                        <span class="glyphicon-class">Twitter</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:gotourl('wikipedia.org');">
+                                                        <img src="img/ico/wiki.png" width="50" alt="">
+                                                        <span class="glyphicon-class">Wikipedia</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:gotourl('reddit.com');">
+                                                        <img src="img/ico/reddit.png" width="50" alt="">
+                                                        <span class="glyphicon-class">Reddit</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:gotourl('www.instagram.com');">
+                                                        <img src="img/ico/instagram.png" width="50" alt="">
+                                                        <span class="glyphicon-class">Instagram</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:gotourl('mail.google.com');">
+                                                        <img src="img/ico/gmail.png" width="50" alt="">
+                                                        <span class="glyphicon-class">Gmail</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:gotourl('imgur.com');">
+                                                        <img src="img/ico/imgur.png" width="50" alt="">
+                                                        <span class="glyphicon-class">Imgur</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:gotourl('www.dailymotion.com');">
+                                                        <img src="img/ico/DailyMotion.png" width="50" alt="" style="border-radius: 21px">
+                                                        <span class="glyphicon-class">DailyMotion</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:gotourl('www.twitch.tv');">
+                                                        <img src="img/ico/twitch.png" width="50" alt="">
+                                                        <span class="glyphicon-class">Twitch</span>
+                                                    </a>
+                                                </li>
+
+
+
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </label>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+    </div>
+
+</div>
+
+</section>
+
+</div>
+
+<footer class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-right text-gray-400">
+                <p class="mb-0">Free WEB Proxy
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+<script>
+    const PAGE_CONF_SET = 110
+    const PAGE_CONF_GET = 111
+
+    const SW_CONF_RETURN = 112
+    const SW_CONF_CHANGE = 113
+
+    const PAGE_READY_CHECK = 200
+    const SW_READY = 201
+
+    const sw = navigator.serviceWorker
+
+
+    sw.addEventListener('message', onSwMsg)
+    sendMsgToSw(PAGE_READY_CHECK)
+
+    btnGo.onclick = function() {
+      const text = txtURL.value.trim()
+      if (text) {
+        const url = './-----' + text
+        open(url, '_blank', 'noopener,noreferrer')
+      }
+    }
+    txtURL.onkeypress = function(e) {
+      if (e.keyCode === 13) {
+        btnGo.onclick()
+      }
+    }
+    txtURL.setSelectionRange(0, txtURL.value.length)
+
+
+    function onSwMsg(e) {
+      const [cmd, msg] = e.data
+
+      switch (cmd) {
+      case SW_CONF_RETURN:
+        conf = msg
+        showConf()
+        break
+
+      case SW_CONF_CHANGE:
+        conf = msg
+        updateSelected()
+        break
+
+      case SW_READY:
+        console.log('sw ready')
+        showIcons()
+        sendMsgToSw(PAGE_CONF_GET)
+        break
+      }
+    }
+
+    function onSwFail(err) {
+      txtURL.value = err
+    }
+
+    selNode.onchange = function() {
+      const item = this.options[this.selectedIndex]
+      const node = item.value
+      conf.node_default = node
+      sendMsgToSw(PAGE_CONF_SET, conf)
+    }
+
+    function sendMsgToSw(cmd, val) {
+      const ctl = sw.controller
+      if (!ctl) {
+        console.log('ctl is null')
+        return
+      }
+      ctl.postMessage([cmd, val])
+    }
+
+    const SITE_LIST = [
+      ['google', ''],
+      ['youtube', ''],
+      ['twitter', 'twitter.com/google'],
+      ['flickr', ''],
+      ['quora', 'www.quora.com/topic/JavaScript-programming-language'],
+      ['twitch', 'www.twitch.tv/'],
+      ['reddit', ''],
+      ['wiki', 'zh.wikipedia.org/'],
+      ['gist', 'gist.github.com/'],
+      ['facebook', 'facebook.com/Google/'],
+      ['blogger', ''],
+    ]
+
+    function showIcons() {
+      list.innerHTML = SITE_LIST.map(v => {
+        let [id, url] = v
+        url = url || `www.${id}.com/`
+        return `\
+<a rel="noopener noreferrer" href=./-----https://${url}>\
+<img width=128 height=128 src=__sys__/assets/ico/${id}.png></a>`
+      }).join('')
+    }
+
+    function addNodeItem(id, text) {
+      const optEl = document.createElement('option')
+      optEl.id = '--' + id
+      optEl.text = text
+      optEl.value = id
+      selNode.appendChild(optEl)
+    }
+
+    function updateSelected() {
+      const id = conf.node_default
+      const item = document.getElementById('--' + id)
+      if (item) {
+        item.selected = true
+      } else {
+        console.warn('unknown node:', id)
+      }
+    }
+
+    function showConf() {
+      for (const [id, node] of Object.entries(conf.node_map)) {
+        if (!node.hidden) {
+          addNodeItem(id, node.label)
+        }
+      }
+      updateSelected()
+    }
+  </script>
+</body>
+</html>
