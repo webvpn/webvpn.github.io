@@ -17,11 +17,11 @@
     <!-- orion icons-->
     <link rel="stylesheet" href="/assets/css/orionicons.css">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="/assetscss/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="/assets/css/custom.css">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="/assets/img/favicon.png?3">
+    <!-- <link rel="shortcut icon" href="/assets/img/favicon.png?3"> -->
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -357,19 +357,7 @@
       ctl.postMessage([cmd, val])
     }
 
-    const SITE_LIST = [
-      ['google', ''],
-      ['youtube', ''],
-      ['twitter', 'twitter.com/google'],
-      ['flickr', ''],
-      ['quora', 'www.quora.com/topic/JavaScript-programming-language'],
-      ['twitch', 'www.twitch.tv/'],
-      ['reddit', ''],
-      ['wiki', 'zh.wikipedia.org/'],
-      ['gist', 'gist.github.com/'],
-      ['facebook', 'facebook.com/Google/'],
-      ['blogger', ''],
-    ]
+    const SITE_LIST = []
 
     function showIcons() {
       list.innerHTML = SITE_LIST.map(v => {
